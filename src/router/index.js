@@ -14,16 +14,17 @@ const routes = [
     component: EventList
   },
   {
+    path: '/event/create', // put it before /event/:id because otherwise might get a mixup
+    name: 'event-create',
+    component: EventCreate
+  },
+  {
     path: '/event/:id',
     name: 'event-show',
     component: EventShow,
     props: true // nécessaire pour récupérer les params dans la view
   },
-  {
-    path: '/event/create',
-    name: 'event-create',
-    component: EventCreate
-  },
+
   {
     path: '/user/:username',
     name: 'user-show',
