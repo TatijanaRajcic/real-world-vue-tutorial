@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link :to="{name: 'event-list'}">List of all events</router-link>|
-      <router-link :to="{name: 'event-create'}">Create Event</router-link>|
-      <router-link :to="{name: 'user-show', params:{username: 'Violette'} }">Violette's profile</router-link>
-    </div>
+    <NavBar />
     <router-view />
   </div>
 </template>
+
+<script>
+import NavBar from '@/components/NavBar.vue'
+
+export default {
+  components: {
+    NavBar
+  }
+}
+</script>
 
 <style>
 html {
@@ -23,7 +29,7 @@ body {
 }
 #app {
   box-sizing: border-box;
-  width: 500px;
+  width: 800px;
   padding: 0 20px 20px;
   margin: 0 auto;
 }
